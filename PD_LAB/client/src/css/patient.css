@@ -1,0 +1,219 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    min-height: 100vh;
+}
+
+.patient-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(19, 68, 117);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon:hover {
+    color: #1abc9c;
+    transform: scale(1.2);
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: rgb(19, 68, 117);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 65px; /* Below header */
+    bottom: 0;
+    overflow-y: auto;
+    border-right: 2px solid white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+    background: #1abc9c;
+}
+
+.sidebar svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+/* Main Content */
+.profile-section {
+    margin-left: 220px; /* Account for sidebar width */
+    padding: 34px;
+    width: calc(100% - 220px);
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    margin-top: 100px; /* Space below header */
+}
+
+/* Cards */
+.profile-card,
+.appointments-card,
+.prescriptions-card,
+.medical-bills-card,
+.medications-card,
+.medical-records-card {
+    margin-top: 20px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* You can use 80% or a fixed value like 500px */
+    min-height: 250px; /* Adjust based on your need */
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.status.active {
+    background: green;
+    color: white;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+td svg {
+    margin-right: 5px;
+    cursor: pointer;
+    color: #555;
+}
+
+.medical-records-card table {
+    margin-top: 15px;
+}
+
+.medical-records-card th,
+.medical-records-card td {
+    padding: 12px 15px;
+}
+
+.medical-records-card th {
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.medical-records-card td {
+    font-size: 13px;
+}
+
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+}
+
+/* Utility Classes */
+.search-bar {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.time {
+    font-size: 14px;
+    color: white;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
