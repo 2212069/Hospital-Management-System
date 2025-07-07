@@ -1,4 +1,4 @@
-# Hospital-Management-System
+#AI- Integrated Hospital-Management-System
 
 
 Key Features and Modules:
